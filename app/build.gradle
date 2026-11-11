@@ -45,4 +45,12 @@ android {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
+
+    // targetSdk 22 is intentional: Android 13 only lets such an app write the
+    // Retroid mouse-mode system setting. Google Play's target-SDK lint is not
+    // relevant because the app is distributed as a GitHub release APK.
+    lint {
+        checkReleaseBuilds false
+        abortOnError false
+    }
 }

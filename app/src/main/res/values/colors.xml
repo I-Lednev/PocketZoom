@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#0B0F14</color>
+    <color name="card">#121821</color>
+    <color name="stroke">#1F2A36</color>
+    <color name="text">#E8EEF5</color>
+    <color name="text_muted">#93A4B8</color>
+    <color name="accent">#4ADE80</color>
+    <color name="accent_dark">#07130B</color>
+    <color name="danger">#EF4444</color>
+    <color name="amber">#FBBF24</color>
+    <color name="button">#1B2430</color>
+    <color name="icon_bg">#0F172A</color>
+</resources>

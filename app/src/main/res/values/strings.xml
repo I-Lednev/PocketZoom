@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pocket Zoom</string>
+    <string name="subtitle">Системное увеличение экрана по аппаратной кнопке. Работает поверх любых приложений.</string>
+
+    <string name="section_status">Состояние</string>
+    <string name="section_key">Аппаратная кнопка</string>
+    <string name="section_scale">Масштаб</string>
+    <string name="section_nav">Управление при увеличении</string>
+    <string name="section_control">Управление</string>
+    <string name="section_diag">Диагностика</string>
+
+    <string name="status_unknown">Служба: проверяю…</string>
+    <string name="service_on">Служба: включена и работает</string>
+    <string name="service_pending">Служба: включена, подключение…</string>
+    <string name="service_off">Служба: выключена</string>
+    <string name="zoom_on">Увеличение: включено</string>
+    <string name="zoom_off">Увеличение: обычный вид</string>
+    <string name="zoom_unknown">Увеличение: —</string>
+    <string name="active_on">Фоновая работа: включена</string>
+    <string name="active_off">Фоновая работа: выключена</string>
+
+    <string name="open_accessibility_settings">Открыть настройки спец. возможностей</string>
+
+    <string name="service_hint">Служба специальных возможностей нужна, чтобы получать нажатия кнопки в фоне и управлять системным увеличением. Root и ADB не требуются.\n\nAndroid 13: если переключатель Pocket Zoom в списке недоступен, откройте «О приложении» → меню ⋮ → «Разрешить ограниченные настройки».</string>
+
+    <string name="assign">Назначить кнопку</string>
+    <string name="assign_wait">Нажмите кнопку… (отмена)</string>
+    <string name="clear">Сбросить</string>
+    <string name="key_none">не назначена</string>
+    <string name="key_value">%1$s · код %2$d</string>
+    <string name="consume">Не передавать нажатие в игру</string>
+    <string name="key_hint">Нажмите «Назначить кнопку», затем нужную кнопку на корпусе (например, M1 или M2). Служба должна быть включена.</string>
+    <string name="gamepad_hint">Если M1/M2 не определяются, Android видит их как кнопки геймпада и не отдаёт фоновым приложениям. В «Handheld settings → Input → Back keys» назначьте M1 на клавишу клавиатуры и повторите.</string>
+
+    <string name="scale_hint">1.5× – 7.0×. Если увеличение включено, масштаб применяется сразу.</string>
+
+    <string name="nav_enable">R2 / L2 — масштаб, D-pad — перемещение</string>
+    <string name="pan_pad_enable">Панорама пальцем (зона в правом нижнем углу)</string>
+    <string name="pan_pad_hint">Прозрачная зона-тачпад появляется в правом нижнем углу, пока экран увеличен. Проведите по ней пальцем — увеличенный экран поедет за пальцем. Эти касания в игру не передаются, поэтому панель можно использовать и вместо стика.\n\nЗону можно выключить этим переключателем, если она мешает.</string>
+    <string name="follow_cursor_enable">Центрировать по курсору мыши</string>
+    <string name="follow_cursor_hint">Работает, когда в настройках Retroid включён режим мыши (Mouse mode): увеличение следует за системным курсором, а при включении приближения центрируется на нём. В настройках Retroid → Cursor settings выберите для курсора правый стик — тогда левый останется для игры. Пока режим мыши выключен, стик снова работает в игре.</string>
+    <string name="auto_mouse_enable">Включать режим мыши вместе с зумом</string>
+    <string name="auto_mouse_hint">Одно нажатие M2: экран увеличивается и включается режим мыши, поэтому стик сразу двигает курсор. Повторное нажатие M2 возвращает обычный вид и выключает режим мыши, а стик снова управляет игрой.\n\nНужно разрешение «Изменение системных настроек». В настройках Retroid → Cursor settings выберите правый стик для курсора.</string>
+    <string name="write_settings_grant">Разрешить изменение системных настроек</string>
+    <string name="section_mouse">МЫШЬ</string>
+    <string name="cursor_speed">Скорость курсора: %1$s</string>
+    <string name="cursor_speed_hint">Чувствительность курсора в режиме мыши, 0,2×–3,0×. Это та же настройка, что «Cursor speed» в настройках Retroid; применяется при включённом зуме и режиме мыши и сохраняется между запусками.</string>
+    <string name="stick_right_enable">Правый стик — курсор (поменять стики местами)</string>
+    <string name="stick_right_hint">По умолчанию указатель двигается левым стиком, а правый работает как колесо. Включите, чтобы поменять их местами. Настройка записывается в конфигурацию мыши Retroid и применяется при включённом зуме.</string>
+    <string name="cursor_vibrate_enable">Вибрация при движении курсора</string>
+    <string name="cursor_vibrate_hint">Едва заметные толчки при перемещении курсора. Работает только при включённом увеличении.</string>
+    <string name="vibrate_strength">Сила вибрации: %1$d%%</string>
+    <string name="nav_pan_step">Шаг перемещения: %1$d%% экрана</string>
+    <string name="nav_hint">Работает только пока экран увеличен. Пока увеличение включено, R2, L2 и D-pad управляют только зумом и перемещением и в игру не передаются.\n\nПравый стик двигает курсор только при включённом режиме мыши (карточка «Мышь»), а увеличение следует за курсором. Для перемещения по экрану без курсора используйте зону-тачпад в правом нижнем углу или D-pad.\n\nМасштаб и положение экрана запоминаются: если выключить увеличение кнопкой M2, а затем включить снова, вернётся та же область с тем же приближением.</string>
+
+    <string name="section_update">ОБНОВЛЕНИЯ</string>
+    <string name="update_current">Установлена версия %1$s</string>
+    <string name="check_updates">Проверить обновления</string>
+    <string name="update_checking">Проверка обновлений…</string>
+    <string name="update_latest">Установлена последняя версия: %1$s</string>
+    <string name="update_available">Доступна версия %1$s</string>
+    <string name="update_error">Не удалось проверить обновления: %1$s</string>
+    <string name="update_no_notes">Описание обновления не указано.</string>
+    <string name="update_notes_prefix">What\'s new:\n%1$s</string>
+    <string name="download_install">Скачать и установить</string>
+    <string name="install_update">Установить</string>
+    <string name="update_allow_install">Разрешите установку из этого источника, затем нажмите «Установить».</string>
+    <string name="update_downloading">Скачивание…</string>
+    <string name="update_download_progress">Скачивание… %1$d%%</string>
+    <string name="update_downloaded">Обновление скачано.</string>
+    <string name="update_ready_install">Обновление скачано. Нажмите «Установить».</string>
+    <string name="update_installing">Открывается системный установщик…</string>
+    <string name="update_file_missing">Файл обновления не найден. Проверьте обновления заново.</string>
+    <string name="update_failed">Не удалось скачать обновление: %1$s</string>
+    <string name="update_installer_missing">Не удалось открыть установщик. Разрешите установку из этого источника.</string>
+    <string name="update_link_failed">Не удалось открыть ссылку.</string>
+    <string name="auto_update_check">Проверять обновления при запуске</string>
+
+    <string name="section_about">О ПРИЛОЖЕНИИ</string>
+    <string name="about_text">Автор: I.Lednev\nВерсия %1$s\n\nПриложение создано для Retroid Pocket 6 (Android 13). На других устройствах не тестировалось.\n\nGitHub: github.com/I-Lednev/PocketZoom</string>
+    <string name="open_github">Открыть GitHub</string>
+
+    <string name="enable">Включить</string>
+    <string name="disable">Выключить</string>
+    <string name="test">Проверить увеличение</string>
+    <string name="control_hint">«Включить» — включает фоновую работу и увеличение экрана. «Выключить» — возвращает обычный вид и останавливает работу.</string>
+
+    <string name="diag_copy">Скопировать отчёт</string>
+    <string name="diag_device">Устройство: %1$s · Android %2$s (SDK %3$d)</string>
+    <string name="diag_cursor">Курсор: %1$s</string>
+    <string name="diag_mouse_line">Режим мыши: %1$s</string>
+    <string name="diag_mouse_unsupported">не поддерживается прошивкой</string>
+    <string name="diag_mouse_no_access"> (нет разрешения)</string>
+    <string name="diag_service">Служба: %1$s</string>
+    <string name="diag_state_on">работает</string>
+    <string name="diag_state_pending">подключение…</string>
+    <string name="diag_state_off">выключена</string>
+    <string name="diag_mag_line">Увеличение сейчас: %1$s</string>
+    <string name="diag_yes">да</string>
+    <string name="diag_no">нет</string>
+    <string name="diag_pending">подключение…</string>
+    <string name="diag_none">Последнее событие: пока ничего. Нажмите любую кнопку — здесь появится её код.</string>
+    <string name="diag_last">Последнее событие: %1$s</string>
+
+    <string name="footer">После перезагрузки служба включается автоматически, если она была включена в настройках. Увеличение — системное: то же, что по двойному удержанию кнопок громкости.</string>
+
+    <string name="service_label">Pocket Zoom — увеличение экрана</string>
+    <string name="accessibility_description">Управляет системным увеличением экрана и переключает его по выбранной аппаратной кнопке. Работает поверх любых приложений, содержимое экрана не читает.</string>
+
+    <string name="notif_channel">Фоновая работа</string>
+    <string name="notif_title">Pocket Zoom работает</string>
+    <string name="notif_action_toggle">Увеличить / сбросить</string>
+    <string name="notif_action_stop">Выключить</string>
+
+    <string name="toast_service_off">Сначала включите службу Pocket Zoom в специальных возможностях</string>
+    <string name="toast_not_connected">Служба включена, но ещё не подключилась. Подождите пару секунд.</string>
+    <string name="toast_key_assigned">Кнопка назначена: %1$s</string>
+    <string name="toast_key_cleared">Кнопка сброшена</string>
+    <string name="toast_mag_on">Увеличение включено</string>
+    <string name="toast_mag_off">Обычный вид</string>
+    <string name="toast_mag_fail">Не удалось переключить увеличение</string>
+    <string name="toast_report_copied">Отчёт скопирован в буфер обмена</string>
+    <string name="toast_report_failed">Не удалось скопировать отчёт</string>
+    <string name="toast_settings_fail">Не удалось открыть настройки. Откройте их вручную: Настройки → Специальные возможности.</string>
+    <string name="toast_capture_started">Нажмите нужную кнопку на корпусе</string>
+    <string name="toast_key_none">Кнопка ещё не назначена</string>
+    <string name="toast_active_on">Фоновая работа включена</string>
+    <string name="toast_active_off">Фоновая работа выключена</string>
+    <string name="toast_capture_cancelled">Назначение отменено</string>
+    <string name="toast_mouse_mode_permission">Чтобы включать режим мыши вместе с зумом, разрешите Pocket Zoom изменение системных настроек</string>
+    <string name="toast_write_settings_failed">Не удалось открыть настройки разрешения. Откройте вручную: Настройки → Приложения → Pocket Zoom → Изменение системных настроек.</string>
+</resources>

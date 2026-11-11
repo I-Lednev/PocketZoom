@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="24dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="28dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/text"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:lineSpacingExtra="2dp"
+            android:text="@string/subtitle"
+            android:textColor="@color/text_muted"
+            android:textSize="14sp" />
+
+        <!-- Состояние -->
+        <LinearLayout
+            style="@style/Card"
+            android:layout_marginTop="18dp">
+
+            <TextView
+                style="@style/Label"
+                android:text="@string/section_status" />
+
+            <TextView
+                android:id="@+id/tvServiceState"
+                style="@style/StatusLine"
+                android:text="@string/status_unknown" />
+
+            <TextView
+                android:id="@+id/tvZoomState"
+                style="@style/StatusLine" />
+
+            <TextView
+                android:id="@+id/tvActiveState"
+                style="@style/StatusLine" />
+
+            <TextView
+                android:id="@+id/tvServiceHint"
+                style="@style/Hint"
+                android:text="@string/service_hint" />
+
+            <Button
+                android:id="@+id/btnAccessibility"
+                style="@style/AppButton"
+                android:layout_marginTop="12dp"
+                android:text="@string/open_accessibility_settings" />
+        </LinearLayout>
+
+        <!-- Кнопка -->
+        <LinearLayout
+            style="@style/Card"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                style="@style/Label"
+                android:text="@string/section_key" />
+
+            <TextView
+                android:id="@+id/tvKey"
+                style="@style/Value" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnAssign"
+                    style="@style/AppButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/assign" />
+
+                <Button
+                    android:id="@+id/btnClearKey"
+                    style="@style/AppButton"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/clear" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/cbConsume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:buttonTint="@color/accent"
+                android:text="@string/consume"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <TextView
+                style="@style/Hint"
+                android:text="@string/key_hint" />
+
+            <TextView
+                style="@style/Hint"
+                android:text="@string/gamepad_hint"
+                android:textColor="@color/amber" />
+        </LinearLayout>
+
+        <!-- Масштаб -->
+        <LinearLayout
+            style="@style/Card"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                style="@style/Label"
+                android:text="@string/section_scale" />
+
+            <TextView
+                android:id="@+id/tvScale"
+                style="@style/Value" />
+
+            <SeekBar
+                android:id="@+id/sbScale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:max="55"
+                android:progressTint="@color/accent"
+                android:thumbTint="@color/accent" />
+
+            <TextView
+                style="@style/Hint"
+                android:text="@string/scale_hint" />
+        </LinearLayout>
+
+        <!-- Управление при увеличении -->
+        <LinearLayout
+            style="@style/Card"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                style="@style/Label"
+                android:text="@string/section_nav" />
+
+            <CheckBox
+                android:id="@+id/cbNav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:buttonTint="@color/accent"
+                android:text="@string/nav_enable"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <CheckBox
+                android:id="@+id/cbPanPad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/accent"
+                android:text="@string/pan_pad_enable"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <TextView
+                style="@style/Hint"
+                android:text="@string/pan_pad_hint" />
+
+            <CheckBox
+                android:id="@+id/cbFollowCursor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/accent"
+                android:text="@string/follow_cursor_enable"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <TextView
+                style="@style/Hint"
+                android:text="@string/follow_cursor_hint" />
+
+            <CheckBox
+                android:id="@+id/cbAutoMouse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/accent"
+                android:text="@string/auto_mouse_enable"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <TextView
+                style="@style/Hint"
+                android:text="@string/auto_mouse_hint" />
+
+            <Button
+                android:id="@+id/btnWriteSettings"
+                style="@style/AppButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/write_settings_grant" />
+
+            <TextView
+                android:id="@+id/tvPan"
+                style="@style/Value"
+                android:textSize="16sp" />
+
+            <SeekBar
+                android:id="@+id/sbPan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="37"
+                android:progressTint="@color/accent"
+                android:thumbTint="@color/accent" />
+
+            <TextView
+                style="@style/Hint"
+                android:text="@string/nav_hint" />
+        </LinearLayout>
+
+        <!-- Мышь -->
+        <LinearLayout
+            style="@style/Card"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                style="@style/Label"
+                android:text="@string/section_mouse" />
+
+            <TextView
+                android:id="@+id/tvCursorSpeed"
+                style="@style/Value" />
+
+            <SeekBar
+                android:id="@+id/sbCursorSpeed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:max="28"
+                android:progressTint="@color/accent"
+                android:thumbTint="@color/accent" />
+
+            <TextView
+                style="@style/Hint"
+                android:text="@string/cursor_speed_hint" />
+
+            <CheckBox
+                android:id="@+id/cbStickRight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:buttonTint="@color/accent"
+                android:text="@string/stick_right_enable"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <TextView
+                style="@style/Hint"
+                android:text="@string/stick_right_hint" />
+
+            <CheckBox
+                android:id="@+id/cbCursorVibrate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:buttonTint="@color/accent"
+                android:text="@string/cursor_vibrate_enable"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <TextView
+                style="@style/Hint"
+                android:text="@string/cursor_vibrate_hint" />
+
+            <TextView
+                android:id="@+id/tvVibrateStrength"
+                style="@style/Value"
+                android:textSize="16sp" />
+
+            <SeekBar
+                android:id="@+id/sbVibrateStrength"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="90"
+                android:progressTint="@color/accent"
+                android:thumbTint="@color/accent" />
+        </LinearLayout>
+
+        <!-- Управление -->
+        <LinearLayout
+            style="@style/Card"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                style="@style/Label"
+                android:text="@string/section_control" />
+
+            <Button
+                android:id="@+id/btnEnable"
+                style="@style/PrimaryButton"
+                android:layout_marginTop="12dp"
+                android:text="@string/enable" />
+
+            <Button
+                android:id="@+id/btnDisable"
+                style="@style/DangerButton"
+                android:layout_marginTop="8dp"
+                android:text="@string/disable" />
+
+            <Button
+                android:id="@+id/btnTest"
+                style="@style/AppButton"
+                android:layout_marginTop="8dp"
+                android:text="@string/test" />
+
+            <TextView
+                style="@style/Hint"
+                android:text="@string/control_hint" />
+        </LinearLayout>
+
+        <!-- Диагностика -->
+        <LinearLayout
+            style="@style/Card"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                style="@style/Label"
+                android:text="@string/section_diag" />
+
+            <TextView
+                android:id="@+id/tvDiag"
+                style="@style/Mono" />
+
+            <TextView
+                android:id="@+id/tvLastKey"
+                style="@style/Mono"
+                android:layout_marginTop="8dp" />
+
+            <Button
+                android:id="@+id/btnCopy"
+                style="@style/AppButton"
+                android:layout_marginTop="12dp"
+                android:text="@string/diag_copy" />
+        </LinearLayout>
+
+        <!-- Обновления -->
+        <LinearLayout
+            style="@style/Card"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                style="@style/Label"
+                android:text="@string/section_update" />
+
+            <TextView
+                android:id="@+id/tvUpdateStatus"
+                style="@style/Value"
+                android:textSize="16sp" />
+
+            <ProgressBar
+                android:id="@+id/pbUpdate"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:indeterminate="true"
+                android:progressTint="@color/accent"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvReleaseNotes"
+                style="@style/Hint"
+                android:maxLines="14"
+                android:ellipsize="end"
+                android:textColor="@color/text"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnCheckUpdates"
+                style="@style/AppButton"
+                android:layout_marginTop="10dp"
+                android:text="@string/check_updates" />
+
+            <Button
+                android:id="@+id/btnInstallUpdate"
+                style="@style/PrimaryButton"
+                android:layout_marginTop="8dp"
+                android:text="@string/download_install"
+                android:visibility="gone" />
+
+            <CheckBox
+                android:id="@+id/cbAutoUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:buttonTint="@color/accent"
+                android:text="@string/auto_update_check"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- О приложении -->
+        <LinearLayout
+            style="@style/Card"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                style="@style/Label"
+                android:text="@string/section_about" />
+
+            <TextView
+                android:id="@+id/tvAbout"
+                style="@style/Hint"
+                android:textColor="@color/text" />
+
+            <Button
+                android:id="@+id/btnGithub"
+                style="@style/AppButton"
+                android:layout_marginTop="10dp"
+                android:text="@string/open_github" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/Hint"
+            android:layout_marginTop="16dp"
+            android:text="@string/footer" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,17 @@
+# Gradle and Android
+.gradle/
+**/build/
+local.properties
+captures/
+.idea/
+*.iml
+*.hprof
+
+# Signing material is intentionally kept out of the repository.
+keystore/
+keystore.properties
+
+# Built APKs are published as GitHub release assets.
+*.apk
+*.aab
+*.ap_
